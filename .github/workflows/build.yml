@@ -261,6 +261,7 @@ jobs:
           go run -v ./cmd/internal/update_android_version --ci
           mkdir clients/android/app/libs
           cp libbox.aar clients/android/app/libs
+          cp libbox.aar dist/release
           cd clients/android
           ./gradlew :app:assemblePlayRelease :app:assembleOtherRelease
         env:
